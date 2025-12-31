@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Lisu</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(to bottom,#ffffff,#fff1f5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Playfair Display',serif;
+  color:#333;
+}
+.card{
+  width:460px;
+  padding:45px;
+  background:#ffffff;
+  border-radius:30px;
+  box-shadow:0 30px 70px rgba(0,0,0,0.12);
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+  <h1>LiSU 🤍</h1>
+  <p style="margin-top:30px;line-height:1.9;font-size:18px;">
+    This wasn’t written loudly.<br><br>
+
+    It was written slowly,
+    gently,
+    with care.<br><br>
+
+    Whatever this year brings,
+    You will always be the safe place for me...<br><br>
+    MY DEAR ROSHOGULLAAHHHH...🥰
+
+  </p>
+</div>
+
+<script>
+const music=document.getElementById("bgMusic");
+if(localStorage.getItem("music")==="on"){ music.play(); }
+</script>
+
+</body>
+</html>

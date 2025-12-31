@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lisu 🤍</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(to bottom,#fff1f5,#ffffff);
+  font-family:'Playfair Display',serif;
+  color:#333;
+}
+.center{
+  text-align:center;
+  animation:fadeIn 2s ease;
+}
+h1{
+  font-size:42px;
+}
+p{
+  font-size:18px;
+  margin-top:10px;
+}
+.newyear{
+  margin-top:20px;
+  font-size:20px;
+}
+button{
+  margin-top:40px;
+  padding:15px 45px;
+  border-radius:50px;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+  background:linear-gradient(45deg,#ff9a9e,#fad0c4);
+}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<div class="center">
+  <h1>LiSU 🤍</h1>
+  <p>Everything begins with you…</p>
+
+  <div class="newyear">
+    🎉 Happy New Year dear BACHHHAAA !!! 🎊🤍✨
+  </div>
+
+  <button onclick="go()">Begin ✨</button>
+</div>
+
+<script>
+function go(){
+  const music = document.getElementById("bgMusic");
+  music.play();
+  localStorage.setItem("music","on");
+  window.location.href="poem.html";
+}
+</script>
+
+</body>
+</html>

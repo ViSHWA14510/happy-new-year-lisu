@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Cutie</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(to bottom,#fff1f5,#ffffff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Playfair Display',serif;
+  color:#333;
+}
+.book{
+  width:420px;
+  height:520px;
+  background:#ffffff;
+  border-radius:20px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.15);
+  padding:40px;
+  position:relative;
+}
+.page{
+  position:absolute;
+  inset:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:26px;
+  opacity:0;
+  transition:opacity 1s ease;
+}
+.page.active{
+  opacity:1;
+}
+button{
+  position:absolute;
+  bottom:30px;
+  right:40px;
+  padding:10px 25px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  background:linear-gradient(45deg,#ff9a9e,#fad0c4);
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<div class="book">
+  <div class="page active">Before I say it…</div>
+  <div class="page">5 🤍<br>Some names feel warm.</div>
+  <div class="page">4 ✨<br>Some names feel safe.</div>
+  <div class="page">3 🌸<br>Some names feel like home.</div>
+  <div class="page">2 🫶<br>Some names are whispered.</div>
+  <div class="page">1 💖<br>And one name…</div>
+  <div class="page"><strong>“Cutie Pie”</strong><br><br>only for you.</div>
+
+  <button onclick="turn()">Next →</button>
+</div>
+
+<script>
+const music=document.getElementById("bgMusic");
+if(localStorage.getItem("music")==="on"){ music.play(); }
+
+const pages=document.querySelectorAll(".page");
+let index=0;
+
+function turn(){
+  pages[index].classList.remove("active");
+  index++;
+  if(index < pages.length){
+    pages[index].classList.add("active");
+  }else{
+    window.location.href="forever.html";
+  }
+}
+</script>
+
+</body>
+</html>
